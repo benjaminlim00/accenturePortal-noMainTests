@@ -112,7 +112,7 @@ app.get("/filter-requests", (req, res) => {
 });
 
 mongoose.connect(
-  "mongodb+srv://benjamin:benpassword@cluster0-uykqv.mongodb.net/test?retryWrites=true"
+ "mongodb+srv://benjamin:benpassword@cluster0-uykqv.mongodb.net/test?retryWrites=true&w=majority"
 );
 mongoose.connection.once("open", () => {
   try {
